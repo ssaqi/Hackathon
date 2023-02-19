@@ -1,8 +1,20 @@
 import React from 'react'
 import './CardItem.css'
-import blutoot from './assest/bluetoot.jpg'
+import blutoot from './assest/champa.jpg'
 import { Close } from '@mui/icons-material'
 const CardItem = () => {
+  
+const [count, setCount]=useState(0)
+
+const Add = () =>{
+     setCount(count +1)
+
+}
+
+const Min = () =>{
+    setCount(count - 1)
+
+}
   return (
     <>
     <div className='CardItem-main'>
@@ -11,16 +23,11 @@ const CardItem = () => {
             <div className="card-detailed">
                 <span className="product-card">Product name</span>
                 <Close id="cloed-icon"/>
-                <div className="counter-card">
-                            <span id='first-span-card'>-</span>
-                            <span id='sec-span-card'>6</span>
-                            <span id='third-span-card'>+</span>
-                        </div>
-                        <div className="card-item-text">
-                            <span id='first-span-card-mult'>3</span>
-                            <span id='sec-span-card-mult'>x</span>
-                            <span id='third-span-card-mult'>&#36;12312</span>
-                        </div>
+                   <div className='Av'> 
+                <button className='btn' onClick={Add}>+</button>
+                <h6 style={{margin:"5px"}}>{count}</h6>
+                <button className='btn' onClick={Min}>-</button>
+                </div> 
             </div>
         </div>   
     </div>
