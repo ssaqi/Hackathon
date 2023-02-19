@@ -3,6 +3,7 @@ import './Footer.css'
 import HouseIcon from '@mui/icons-material/House';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import Setting from '../Setting';
 import { Link } from 'react-router-dom';
 function Footer() {
@@ -21,6 +22,12 @@ function Footer() {
     <div><PersonIcon style={{marginLeft:"20%"}}/>
     <p style={{fontSize: "13px", fontWeight:"700"}}><Link to="/setting" style={{textDecoration:"none",color:"#000"}}>Account</Link></p>
     </div>
+
+
+     <div><SupervisorAccountIcon style={{marginLeft:"20%"}}/>
+    <p style={{fontSize: "13px", fontWeight:"700"}}><Link to="/Admin" style={{textDecoration:"none",color:"#000"}}>Admin</Link></p>
+    </div>
+
 
     </div>
 
